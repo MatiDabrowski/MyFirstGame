@@ -11,7 +11,8 @@ javafx {
 
 group  'org.example'
 version  '0.0.1-SNAPSHOT'
-mainClassName = 'com.kodilla.chinczyk.Chinczyk'
+mainClassName = 'com.kodilla.kolkokrzyzyk.KolkoKrzyzykGame'
+//mainClassName = 'com.kodilla.chinczyk.Chinczyk'
 
 repositories {
     mavenCentral()

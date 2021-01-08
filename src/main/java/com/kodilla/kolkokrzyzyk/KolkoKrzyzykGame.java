@@ -16,25 +16,16 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import javax.swing.*;
-import javax.swing.Timer;
 import java.util.*;
-import java.util.concurrent.Flow;
+
 
 public class KolkoKrzyzykGame extends Application {
     private Image imageback = new Image("file:src/main/resources/ttt.png");
     private Pane dices = new Pane();
     private Pane throwButton = new Pane();
     private Pane labels = new Pane();
+    public CheckWhosTurn checkWhosTurn = new CheckWhosTurn();
     String whosTurn = "X";
-    private void checkWhosTurn(){
-        if (whosTurn == "X") {
-            whosTurn = "O";
-        } else {
-            whosTurn = "X";
-        }
-    }
     Random randomInt = new Random();
     int randInt = 0;
     private String xOrObutt1;
@@ -48,81 +39,10 @@ public class KolkoKrzyzykGame extends Application {
     private String xOrObutt9;
     private HashSet<Button> disableButtons = new HashSet<>();
     private Alert alertBox = new Alert(Alert.AlertType.INFORMATION);
+    private CheckWhosWin checkWhosWin = new CheckWhosWin();
 
     private void checkWhosWin() {
-        if(disableButtons.size() == 9) {
-            alertBox.setContentText("Nobody win :(");
-            alertBox.show();
-        }
-
-        if (xOrObutt1 == "X" && xOrObutt2 == "X" && xOrObutt3 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt1 == "O" && xOrObutt2 == "O" && xOrObutt3 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt4 == "X" && xOrObutt5 == "X" && xOrObutt6 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt4 == "O" && xOrObutt5 == "O" && xOrObutt6 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt7 == "X" && xOrObutt8 == "X" && xOrObutt9 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt7 == "O" && xOrObutt8 == "O" && xOrObutt9 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt7 == "X" && xOrObutt8 == "X" && xOrObutt9 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt1 == "X" && xOrObutt4 == "X" && xOrObutt7 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt1 == "O" && xOrObutt4 == "O" && xOrObutt7 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt2 == "X" && xOrObutt5 == "X" && xOrObutt8 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt2 == "O" && xOrObutt5 == "O" && xOrObutt8 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt3 == "X" && xOrObutt6 == "X" && xOrObutt9 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt3 == "O" && xOrObutt6 == "O" && xOrObutt9 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt1 == "X" && xOrObutt5 == "X" && xOrObutt9 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt1 == "O" && xOrObutt5 == "O" && xOrObutt9 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
-        if (xOrObutt3 == "X" && xOrObutt5 == "X" && xOrObutt7 == "X") {
-            alertBox.setContentText("The winner is: X");
-            alertBox.show();
-        }
-        if (xOrObutt3 == "O" && xOrObutt5 == "O" && xOrObutt7 == "O") {
-            alertBox.setContentText("The winner is: O");
-            alertBox.show();
-        }
+            checkWhosWin.checkWhosWin(xOrObutt1, xOrObutt2, xOrObutt3, xOrObutt4, xOrObutt5, xOrObutt6, xOrObutt7, xOrObutt8, xOrObutt9, disableButtons);
     }
     public static void main(String[] args) {
         launch(args);
@@ -241,7 +161,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[1].setDisable(true);
                 xOrObutt1 = whosTurn;
                 disableButtons.add(button[1]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -259,7 +179,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[2].setDisable(true);
                 xOrObutt2 = whosTurn;
                 disableButtons.add(button[2]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -276,7 +196,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[3].setDisable(true);
                 xOrObutt3 = whosTurn;
                 disableButtons.add(button[3]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -293,7 +213,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[4].setDisable(true);
                 xOrObutt4 = whosTurn;
                 disableButtons.add(button[4]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -310,7 +230,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[5].setDisable(true);
                 xOrObutt5 = whosTurn;
                 disableButtons.add(button[5]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -327,7 +247,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[6].setDisable(true);
                 xOrObutt6 = whosTurn;
                 disableButtons.add(button[6]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -344,7 +264,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[7].setDisable(true);
                 xOrObutt7 = whosTurn;
                 disableButtons.add(button[7]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -361,7 +281,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[8].setDisable(true);
                 xOrObutt8 = whosTurn;
                 disableButtons.add(button[8]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {
@@ -378,7 +298,7 @@ public class KolkoKrzyzykGame extends Application {
                 button[9].setDisable(true);
                 xOrObutt9 = whosTurn;
                 disableButtons.add(button[9]);
-                checkWhosTurn();
+                whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
                 if(whosTurn == "O") {

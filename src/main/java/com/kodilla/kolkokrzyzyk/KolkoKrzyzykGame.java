@@ -164,7 +164,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -182,7 +182,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -199,7 +199,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -216,7 +216,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -233,7 +233,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -250,7 +250,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -267,7 +267,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -284,7 +284,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }
@@ -301,7 +301,7 @@ public class KolkoKrzyzykGame extends Application {
                 whosTurn = checkWhosTurn.checkWhosTurn(whosTurn);
                 label.setText("It is " + whosTurn + " turn.");
                 checkWhosWin();
-                if(whosTurn == "O") {
+                if("O".equals(whosTurn)) {
                     timeline.play();
                     checkWhosWin();
                 }

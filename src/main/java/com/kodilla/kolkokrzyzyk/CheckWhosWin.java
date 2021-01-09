@@ -1,9 +1,7 @@
 package com.kodilla.kolkokrzyzyk;
-
 import javafx.scene.control.Alert;
-
 import java.util.HashSet;
-import java.util.Map;
+
 
 public class CheckWhosWin {
 
@@ -16,71 +14,71 @@ public class CheckWhosWin {
             alertBox.show();
         }
 
-        if (xOrObutt1.equals("X") && xOrObutt2 == "X" && xOrObutt3 == "X") {
+        if ("X".equals(xOrObutt1) && "X".equals(xOrObutt2) && "X".equals(xOrObutt3)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt1 == "O" && xOrObutt2 == "O" && xOrObutt3 == "O") {
+        if ("O".equals(xOrObutt9) && "O".equals(xOrObutt2) && "O".equals(xOrObutt3)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt4 == "X" && xOrObutt5 == "X" && xOrObutt6 == "X") {
+        if ("X".equals(xOrObutt4) && "X".equals(xOrObutt5) && "X".equals(xOrObutt6)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt4 == "O" && xOrObutt5 == "O" && xOrObutt6 == "O") {
+        if ("O".equals(xOrObutt4) && "O".equals(xOrObutt5) && "O".equals(xOrObutt6)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt7 == "X" && xOrObutt8 == "X" && xOrObutt9 == "X") {
+        if ("X".equals(xOrObutt7) && "X".equals(xOrObutt8) && "X".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt7 == "O" && xOrObutt8 == "O" && xOrObutt9 == "O") {
+        if ("O".equals(xOrObutt7) && "O".equals(xOrObutt8) && "O".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt7 == "X" && xOrObutt8 == "X" && xOrObutt9 == "X") {
+        if ("X".equals(xOrObutt7) && "X".equals(xOrObutt8) && "X".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt1 == "X" && xOrObutt4 == "X" && xOrObutt7 == "X") {
+        if ("X".equals(xOrObutt1) && "X".equals(xOrObutt4) && "X".equals(xOrObutt7)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt1 == "O" && xOrObutt4 == "O" && xOrObutt7 == "O") {
+        if ("O".equals(xOrObutt9) && "O".equals(xOrObutt4) && "O".equals(xOrObutt7)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt2 == "X" && xOrObutt5 == "X" && xOrObutt8 == "X") {
+        if ("X".equals(xOrObutt2) && "X".equals(xOrObutt5) && "X".equals(xOrObutt8)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt2 == "O" && xOrObutt5 == "O" && xOrObutt8 == "O") {
+        if ("O".equals(xOrObutt2) && "O".equals(xOrObutt5) && "O".equals(xOrObutt8)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt3 == "X" && xOrObutt6 == "X" && xOrObutt9 == "X") {
+        if ("X".equals(xOrObutt3) && "X".equals(xOrObutt6) && "X".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt3 == "O" && xOrObutt6 == "O" && xOrObutt9 == "O") {
+        if ("O".equals(xOrObutt3) && "O".equals(xOrObutt6) && "O".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt1 == "X" && xOrObutt5 == "X" && xOrObutt9 == "X") {
+        if ("X".equals(xOrObutt1) && "X".equals(xOrObutt5) && "X".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt1 == "O" && xOrObutt5 == "O" && xOrObutt9 == "O") {
+        if ("O".equals(xOrObutt9) && "O".equals(xOrObutt5) && "O".equals(xOrObutt9)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }
-        if (xOrObutt3 == "X" && xOrObutt5 == "X" && xOrObutt7 == "X") {
+        if ("X".equals(xOrObutt3) && "X".equals(xOrObutt5) && "X".equals(xOrObutt7)) {
             alertBox.setContentText("The winner is: X");
             alertBox.show();
         }
-        if (xOrObutt3 == "O" && xOrObutt5 == "O" && xOrObutt7 == "O") {
+        if ("O".equals(xOrObutt3) && "O".equals(xOrObutt5) && "O".equals(xOrObutt7)) {
             alertBox.setContentText("The winner is: O");
             alertBox.show();
         }

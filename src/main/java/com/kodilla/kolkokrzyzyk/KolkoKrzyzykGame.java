@@ -127,7 +127,33 @@ public class KolkoKrzyzykGame extends Application {
         label.setText("It is " + whosTurn + " turn.");
 
         Button compMovebutton = new Button();
+        Button newGameButton = new Button("Nowa gra");
 
+        newGameButton.setPrefSize(200, 50);
+        newGameButton.setLayoutY(20);
+        newGameButton.setLayoutX(80);
+
+        EventHandler<ActionEvent> newGame = new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e)
+            {
+                whosTurn = "X";
+                for(int n = 1; n < 10; n++) {
+                    button[n].setText("");
+                    button[n].setDisable(false);
+                    disableButtons.remove(button[n]);
+                }
+                xOrObutt1 = "";
+                xOrObutt2 = "";
+                xOrObutt3 = "";
+                xOrObutt4 = "";
+                xOrObutt5 = "";
+                xOrObutt6 = "";
+                xOrObutt7 = "";
+                xOrObutt8 = "";
+                xOrObutt9 = "";
+                label.setText("It is " + whosTurn + " turn.");
+            }
+        };
 
         EventHandler<ActionEvent> compMove = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
@@ -318,6 +344,7 @@ public class KolkoKrzyzykGame extends Application {
         button[8].setOnAction(button8Event);
         button[9].setOnAction(button9Event);
         compMovebutton.setOnAction(compMove);
+        newGameButton.setOnAction(newGame);
 
 
         grid.getChildren().add(button[1]);
@@ -330,6 +357,7 @@ public class KolkoKrzyzykGame extends Application {
         grid.getChildren().add(button[8]);
         grid.getChildren().add(button[9]);
         grid.getChildren().add(label);
+        grid.getChildren().add(newGameButton);
         Scene scene = new Scene(grid, 800, 800, Color.WHITESMOKE);
 
         primaryStage.setTitle("Kółko i krzyżyk");
